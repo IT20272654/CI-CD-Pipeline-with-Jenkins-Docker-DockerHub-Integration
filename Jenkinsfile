@@ -10,7 +10,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t jobrecruitment_client_v1 .'
+                sh 'docker build -t jobrecruitment_client_v2 .'
             }
         }
 
