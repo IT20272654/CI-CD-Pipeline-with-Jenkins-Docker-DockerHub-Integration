@@ -18,8 +18,8 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
                     sh 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
-                    sh 'docker tag jobrecruitment_client_v1 $DOCKER_USERNAME/jobrecruitment_client_v1:latest'
-                    sh 'docker push $DOCKER_USERNAME/jobrecruitment_client_v1:latest'
+                    sh 'docker tag jobrecruitment_client_v2 $DOCKER_USERNAME/jobrecruitment_client_v2:latest'
+                    sh 'docker push $DOCKER_USERNAME/jobrecruitment_client_v2:latest'
                 }
             }
         }
